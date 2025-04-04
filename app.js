@@ -12,3 +12,14 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
 });
+
+app.get('/integrantes', (req, res) => {
+    const data = {
+      integrantes: [
+        { nome: 'Pedro Henrique sardá wilpert' },
+        { nome: 'João Pedro Vieira da Cunha Caetano ' },
+        { nome: 'Matheus de Sousa Alberton'}
+      ]
+    };
+    res.json(data);
+  });
